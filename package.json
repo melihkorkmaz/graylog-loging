@@ -1,6 +1,6 @@
 {
   "name": "graylog-loging",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is a node js loging middleware for graylog. It has been designed for request and response loging.",
   "main": "index.js",
   "scripts": {
