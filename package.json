@@ -1,0 +1,31 @@
+{
+  "name": "graylog-loging",
+  "version": "1.0.0",
+  "description": "This is a node js loging middleware for graylog. It has been designed for request and response loging.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melihkorkmaz/graylog-loging.git"
+  },
+  "keywords": [
+    "Graylog",
+    "logging",
+    "request",
+    "response",
+    "log",
+    "middleware"
+  ],
+  "author": "Melih Korkmaz - melih@tdsmaker.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melihkorkmaz/graylog-loging/issues"
+  },
+  "homepage": "https://github.com/melihkorkmaz/graylog-loging#readme",
+  "dependencies": {
+    "express-mung": "0.4.6",
+    "gelf": "1.0.3"
+  }
+}
