@@ -61,6 +61,7 @@ module.exports.logRequest = function(req, res, next){
         "version": "1.1",
         "ip" : ip,
         "environment" : _config.environment,
+        "application": _config.applicationName,
         "host": _config.applicationName,
         "short_message": "Request log for '" + req.originalUrl + "'",
         "log-level": _config.requestLogLevel,
@@ -100,6 +101,7 @@ module.exports.logResponse = mung.json(function(body, req, res){
         "short_message": "Response log for '" + req.originalUrl + "'",
         "body" : body,
         "log-level": _config.responseLogLevel,
+        "application": _config.applicationName,
         "host": _config.applicationName,
         "method" : req.method,
         "pair-id" : req.pairId,
@@ -120,6 +122,7 @@ module.exports.handleErrors = function(err, req, res, next){
     "short_message": "Error log for '" + req.originalUrl + "'",
     "error" : err.stack,
     "log-level": "error",
+    "application": _config.applicationName,
     "host": _config.applicationName,
     "method" : req.method,
     "pair-id" : req.pairId,
@@ -146,6 +149,7 @@ module.exports.log = function(level, params){
     var message = {
         "version": "1.1",
         "environment" : _config.environment,
+        "application": _config.applicationName,
         "host": _config.applicationName,
         "log-level": level,
         "type" : "application-log"
@@ -187,6 +191,7 @@ process.on('uncaughtException', function (err) {
             "short_message": "Critical Error!",
             "error" : err.stack,
             "log-level": "critical",
+            "application": _config.applicationName,
             "host": _config.applicationName,
             "type" : "uncaught-exception"
         };
